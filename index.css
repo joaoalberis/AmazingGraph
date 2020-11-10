@@ -1,0 +1,225 @@
+#inicio{
+    min-height: 100vh;
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    margin: auto;
+
+    width: min(95%, 112rem);
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+img {
+    position: absolute;
+    top: 8rem;
+    right: 1rem;
+    margin-top: 10rem;
+}
+
+.botoes {
+    background-color: #766F68;
+    width: 3rem;
+    height: .4rem;
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 3rem
+}
+
+.botoes::after {
+    background-color: #766F68;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    margin-top: .5rem;
+}
+
+.botoes::before {
+    background-color: #766F68;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    margin-top: .9rem;
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ label .botoes{
+    position: absolute;
+    right: 2rem;
+    transition: 1s;
+    top: 1rem;
+    box-shadow: 0 2rem 0 7rem orange;
+}
+
+
+input:checked ~ ul {
+    opacity: 1;
+    transition: 3s;
+    background: orange;
+    position: absolute;
+    width: 12rem;
+}
+
+ul {
+    position: absolute;
+    top: 15%;
+    left: 62.5%;
+    list-style: none;
+    opacity: 0;
+}
+
+li {
+    margin-top: .5rem;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+header h1{
+    color:#D2872C;
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+main h1 {
+    color: #766F68;
+    margin-top: 30rem;
+    font-size: 4rem;
+    align-items: center;
+}
+
+main p {
+    color: #766F68;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
+main button {
+    text-decoration: none;
+    margin-top: 2rem;
+    background: #D2872C;
+    padding: 2rem 10rem;
+    border-radius: 2rem;
+    border: 0;
+    color: white;
+}
+
+main button a {
+    font-size: 2rem;
+}
+
+#botao {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 10rem;
+}
+
+@media (min-width: 760px) {
+    #container {
+        margin: auto;
+    
+        width: min(100%, 112rem);
+    }
+
+    header h1{
+        font-size: 5rem;
+    }
+
+    .botoes {
+        width: 0rem;
+        position: absolute;
+        height: 0rem;
+    }
+    
+    .botoes::after {
+        width: 0%;
+        height: 0%;
+        display: absolute;
+    }
+    
+    input {
+        position: absolute;
+        display: none;
+    }
+    
+    ul {
+        position: absolute;
+        top: 4rem;
+        list-style: none;
+        display: flex;
+        opacity: 1;
+    }
+    
+    li {
+        margin-left: 20%;
+        font-size: 3rem;
+    }
+
+    ul li a{
+        font-size: 2.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+    }
+
+     img {
+        width: 60rem;
+        margin-bottom: 0;
+        position: static;
+    }
+
+    #texto {
+        height: 1rem;
+    }
+
+    main h1{
+        margin-top: 15rem;
+    }
+
+    #texto h1 {
+        font-size: 5rem;
+        text-align: left;
+        height: 12rem;
+    }
+
+    #texto p {
+        font-size: 2.9rem;
+        text-align: left;
+    }
+
+    main button {
+        margin-top: 4rem;
+        padding: 1.3rem 6rem;
+        margin-right: 25rem;
+    }
+
+    main button a {
+        font-size: 2rem;
+    }
+
+    #botao{
+        padding: 0;
+    }
+    
+}
